@@ -6,7 +6,11 @@ const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: '*' } });
+const io = new Server(server, { 
+  cors: { 
+    origin: ["https://stpaul-kitchen-app.vercel.app/", "http://localhost:5173"] 
+  } 
+});
 
 app.use(cors());
 app.use(express.json());
