@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { 
   cors: { 
-    origin: ["https://stpaul-kitchen-app.vercel.app/", "http://localhost:5173"] 
+    origin: ["https://stpaul-kitchen-app.vercel.app", "http://localhost:5173"] 
   } 
 });
 
@@ -26,12 +26,17 @@ let nextId = 3;
 let sessions = new Set();
 
 app.post('/login', (req, res) => {
+  console.log('Login attempt:', req.body);
   const { password } = req.body;
+  console.log('Expected password:', PASSWORD);
+  console.log('Received password:', password);
   if (password === PASSWORD) {
     const token = Math.random().toString(36).substr(2);
     sessions.add(token);
+    console.log('Login successful, token:', token);
     res.json({ success: true, token });
   } else {
+    console.log('Login failed - password mismatch');
     res.status(401).json({ success: false });
   }
 });
