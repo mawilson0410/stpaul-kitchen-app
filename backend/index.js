@@ -19,8 +19,15 @@ app.use(express.json());
 
 const PASSWORD = process.env.PASSWORD || 'kitchen123';
 let foodItems = [
-  { id: 1, name: 'Chicken', count: 0 },
-  { id: 2, name: 'Rice', count: 0 }
+  { id: 1, name: 'Lamb', count: 0 },
+  { id: 2, name: 'Chicken', count: 0 },
+  { id: 3, name: 'Pastitsio', count: 0 },
+  { id: 4, name: 'Moussaka', count: 0 },
+  { id: 5, name: 'Rice', count: 0 },
+  { id: 6, name: 'Beans', count: 0 },
+  { id: 7, name: 'Potatoes', count: 0 },
+  { id: 8, name: 'Dolmades', count: 0 },
+  { id: 9, name: 'Special', count: 0 }
 ];
 let nextId = 3;
 
