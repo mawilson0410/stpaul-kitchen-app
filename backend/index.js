@@ -12,7 +12,9 @@ const io = new Server(server, {
   } 
 });
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://stpaul-kitchen-app.vercel.app", "http://localhost:5173"]
+}));
 app.use(express.json());
 
 const PASSWORD = process.env.PASSWORD || 'kitchen123';
@@ -83,5 +85,5 @@ io.on('connection', (socket) => {
   socket.emit('update', foodItems);
 });
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
