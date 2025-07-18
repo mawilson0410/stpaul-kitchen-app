@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const Editor: React.FC = () => {
   const [food, setFood] = useState<FoodItem[]>([]);
   const [newName, setNewName] = useState('');
-  const [lockItems, setLockItems] = useState(false);
+  const [lockItems, setLockItems] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {

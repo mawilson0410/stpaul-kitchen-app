@@ -76,7 +76,7 @@ const DisplayBoard: React.FC = () => {
             </div>
             <div
               className={`font-extrabold drop-shadow-xl flex-1 flex items-center justify-center ${
-                item.count === 0 ? 'text-red-500' : 'text-green-600'
+                item.count <= 3 ? 'text-red-500' : 'text-green-600'
               }`}
               style={{
                 fontSize: 'clamp(2rem, 6vw, 8rem)'
