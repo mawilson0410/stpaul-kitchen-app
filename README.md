@@ -1,4 +1,4 @@
-# 🥘 Food Tray Tracker
+# 🥘 Resturant Food Logistics Application
 
 A lightweight React + TypeScript web app for real-time tracking of warm food trays in kitchen staging areas. Designed for use on mobile, tablet, or TV screens in restaurant kitchens.
 
